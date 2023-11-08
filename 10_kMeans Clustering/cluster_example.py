@@ -13,8 +13,8 @@ from sklearn.metrics import confusion_matrix
 #%%
 import os
 os.listdir()
-#print(os.getcwd())
-os.chdir('c:\\Users\\Brian Wright\\Documents\\3001Python\\DS-3001')
+print(os.getcwd())
+os.chdir('/Users/Luke/DS-3001')
 #%%
 # Load Data
 house_votes_Dem = pd.read_csv("data/house_votes_Dem.csv", encoding='latin')
@@ -25,8 +25,8 @@ print(house_votes_Dem.head())
 house_votes_Dem.info()
 #%%
 #Create summary of aye and nay votes by party label
-house_votes_Rep.groupby("party.labels").agg({"aye": "sum", "nay": "sum", "other": "sum"})
-#house_votes_Dem.groupby("party.labels").agg({"aye": "sum", "nay": "sum", "other": "sum"})
+#house_votes_Rep.groupby("party.labels").agg({"aye": "sum", "nay": "sum", "other": "sum"})
+house_votes_Dem.groupby("party.labels").agg({"aye": "sum", "nay": "sum", "other": "sum"})
 
 #%%
 # Step 2: run k-means
